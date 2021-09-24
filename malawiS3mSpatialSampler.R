@@ -31,19 +31,19 @@ text(x = coordinates(mwi_admbnda_adm2_nso_20181016), labels = mwi_admbnda_adm2_n
 text(x = coordinates(mwi_admbnda_adm2_nso_20181016), labels = mwi_admbnda_adm2_nso_20181016$ADM2_EN)
 
 ## Subset Central region only the polygon with MW2
-CentralRegion_MW2 <- subset(x = mwi_admbnda_adm1_nso_20181016, subset = ADM1_PCODE == MW2)
+CentralRegion_MW2 <- subset(x = mwi_admbnda_adm1_nso_20181016, subset = ADM1_PCODE == "MW2")
 str(CentralRegion_MW2)
 plot(CentralRegion_MW2)
 
 ## Subset Dowa district only the polygon with identifier MW204
 
-DowaDistrict_MW204 <- subset(x = mwi_admbnda_adm2_nso_20181016, subset = ADM2_PCODE == MW204)
+DowaDistrict_MW204 <- subset(x = mwi_admbnda_adm2_nso_20181016, subset = ADM2_PCODE == "MW204")
 str(DowaDistrict_MW204)
 plot(DowaDistrict_MW204)
 
 ## Plot Dowa_MW204 in the centre with all other districts borders still showing
 plot(DowaDistrict_MW204, lty = 0)
-plot(DowaDistrict_MW204, add = TRUE)
+plot(mwi_admbnda_adm2_nso_20181016, add = TRUE)
 
 ## Plot Dowa with area MW204 with thicker borders and red colour
 plot(DowaDistrict_MW204)
